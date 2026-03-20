@@ -27,6 +27,43 @@ h1 p {
 .services {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 1.5;
+    grid-gap: 1.5rem;
+}
+
+.card {
+    background-color: #f9f6ff;
+    border: 1px;
+    border-radius: 5px;
+    padding: 1.4rem;
+}
+
+h3 {
+    color: #1a1a2e;
+    margin-top: none;
+}
+
+.price {
+    font-weight: bold;
+    color: #6a0572;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: #6a0572;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #56045c;
+}
+
+.footer {
+    text-align: center;
+    color: grey;
+    font-size: small;
+    margin-top: 2rem;
 }

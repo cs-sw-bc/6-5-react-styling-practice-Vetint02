@@ -1,0 +1,29 @@
+.card {
+    background-color: #f3e5f5;
+    border: 3px;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.header {
+    background-color: #5d008f;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    border: 3px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.footer{
+    text-align: center;
+    color: grey;
+    font-size: small;
+    margin-top: 2rem;
+}

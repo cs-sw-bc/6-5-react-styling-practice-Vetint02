@@ -28,50 +28,67 @@ export default function BookingPage() {
 
   return (
     // TODO 25: Wrap everything in a Container with maxWidth="sm" and sx={{ py: 4 }}
-    <div>
+    <Container maxWidth="sm" sx={{ py: 4 }}>
 
       {/* TODO 26: Replace this div with a Box — dark background, white text, centred, with padding and border-radius */}
       {/* Inside it, add two Typography components: h4 for "Gloss & Co", body1 for "Book an Appointment" */}
-      <div>
-        <h1>Gloss & Co</h1>
-        <p>Book an Appointment</p>
-      </div>
+      <Box
+        sx={{
+          backgroundColor: '#1a1a2e',
+          color: 'white',
+          textAlign: 'center',
+          padding: '2rem',
+          borderRadius: '12px'
+        }}
+      >
+        <Typography variant="h4" component="h2">
+          Gloss & Co
+        </Typography>
+
+        <Typography variant="body1">
+          Book an Appointment
+        </Typography>
+      </Box>
 
       {/* TODO 30: Show an Alert with severity="success" here when submitted is true */}
 
       {/* TODO 27: Replace this div with a Stack spacing={3} */}
-      <div>
+      <Stack spacing={3}>
 
         <h2>Your Details</h2>
 
         {/* TODO 27: Replace these with TextField components — variant="outlined", fullWidth */}
-        <input placeholder="Full Name" />
-        <input placeholder="Email Address" />
-        <input placeholder="Phone Number" />
+        <TextField placeholder="Full Name" variant="outlined" fullWidth />
+        <TextField placeholder="Email Address" variant="outlined" fullWidth />
+        <TextField placeholder="Phone Number" variant="outlined" fullWidth />
 
         <h2>Appointment</h2>
 
         {/* TODO 28: Replace with a TextField type="date" */}
-        <input type="date" />
+        <TextField type="date" />
 
         {/* TODO 28: Replace with a TextField select, with MenuItem children for each stylist */}
-        <select>
-          {stylists.map(s => <option key={s}>{s}</option>)}
-        </select>
+        <TextField select label="Select Stylist" defaultValue="">
+          {stylists.map(s => <MenuItem key={s}>{s}</MenuItem>)}
+        </TextField>
 
         {/* TODO 29: Add a Typography label showing "Budget: $X" using the budget state */}
+        <Typography>
+          Budget: {budget}
+        </Typography>
         {/* TODO 29: Replace this with a Slider — min=20, max=300, step=10, valueLabelDisplay="auto" */}
-        <input type="range" min="20" max="300" value={budget} onChange={e => setBudget(e.target.value)} />
+        <Slider min={20} max={300} stemp={10} valueLabelDisplay='auto'>
 
+        </Slider>
         {/* TODO 30: Replace this div with a Stack direction="row" spacing={2} */}
         {/* TODO 30: Replace these with Button components — contained and outlined variants */}
-        <div>
-          <button onClick={() => setSubmitted(true)}>Confirm Booking</button>
-          <button>Cancel</button>
-        </div>
+        <Stack direction="row" spacing={2}>
+          <Button variant = "contained" onClick={() => setSubmitted(true)}>Confirm Booking</Button>
+          <Button variant = "outlined">Cancel</Button>
+        </Stack>
 
-      </div>
+      </Stack>
 
-    </div>
+    </Container >
   );
 }
