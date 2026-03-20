@@ -8,6 +8,7 @@
 // - Add className attributes to the elements below (TODOs 8–16)
 
 // TODO 7: Import services.css here
+import "../styles/services.css"
 
 const services = [
   { id: 1, name: 'Blow Dry & Style', description: 'Shampoo, blow dry, and finish', price: '$45' },
@@ -21,16 +22,16 @@ const services = [
 export default function ServicesPage() {
   return (
     // TODO 8: Add className for the page wrapper
-    <div>
+    <div className="Container_main">
 
       {/* TODO 9 & 10: Add className for the header */}
-      <div>
+      <div ClassName="header">
         <h1>Gloss & Co</h1>
         <p>Premium hair services in the heart of the city</p>
       </div>
 
       {/* TODO 11: Add className for the services grid */}
-      <div>
+      <div ClassName="services">
         {services.map(service => (
           // TODO 12 & 13: Add className for each service card
           <div key={service.id}>

@@ -23,7 +23,7 @@ export default function App() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            style={{
+            style={{ 
               padding: '0.75rem 1.5rem',
               border: 'none',
               borderBottom: activeTab === tab.id ? '3px solid #6a0572' : '3px solid transparent',

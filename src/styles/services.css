@@ -1,0 +1,32 @@
+.Container_main {
+    display: block;
+    margin: 0 auto;
+    max-width: 860px;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: none;
+}
+
+h1 p {
+    opacity: 0.2;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1.5;
+}
